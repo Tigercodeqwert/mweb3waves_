@@ -8,14 +8,14 @@ class App extends React.Component {
 		this.authFunc = this.authFunc.bind(this);
 	}
 	authFunc() {
-		const authData = { data: "Auth on my site"}:
+		const authData = { data: "Auth on my site"};
 		if (WavesKeeper) {
 			WavesKeeper.auth( authData )
 			.then(auth => {
-				console.log( auth ); //displaying the result on the console
+				console.log( auth );   //displaying the result on the console
                 /*...processing data */ 
 			}).catch(error => {
-				console.error( error ); // displaying the result on the console
+				console.error( error );  // displaying the result on the console
                 /*...processing errors */
 			})
 		} else {
@@ -31,7 +31,7 @@ class App extends React.Component {
 	}
 }
 
-const app = document.getElementById('app')
+const app = document.getElementById('app');
 if(app){
 	ReactDOM.render(<App/>, app);
 }
